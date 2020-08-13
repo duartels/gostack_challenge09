@@ -43,7 +43,7 @@ class CreateOrderService {
       })),
     );
 
-    if (!checkProducts) {
+    if (checkProducts.length !== products.length) {
       throw new AppError('Product not found');
     }
 
